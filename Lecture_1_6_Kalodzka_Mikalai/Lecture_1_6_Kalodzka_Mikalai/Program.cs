@@ -64,9 +64,13 @@ namespace ConsoleApp7
             Console.WriteLine("Введите название покупки: ");
             string name = Console.ReadLine();
             Console.WriteLine("Введите стоимость покупки: ");
+            // TODO не безопасно
             decimal price = decimal.Parse(Console.ReadLine());
+            // TODO возможно случайное перетерание, возможно создание продуктов с name == string.Empty или пустыми пробелами
             purchaseList[name] = price;
+            // TODO - CONST
             string dictionaryValue = "Добавлено - Покупка: {0}  |  Стоимость: {1}";
+            // TODO не нужен формат
             Console.WriteLine(string.Format(dictionaryValue, name, price));
 
 
@@ -90,6 +94,7 @@ namespace ConsoleApp7
         static void OutputGreaterThan()
         {
             Console.WriteLine("Введите стоимость: ");
+            // TODO - TryParse
             decimal price = decimal.Parse(Console.ReadLine());
             string priceCompare = "Товар {0} стоимостью {1} дороже, чем {2}.";
             int counter = 0;
@@ -102,6 +107,7 @@ namespace ConsoleApp7
                     counter++;
                     Console.WriteLine(string.Format(priceCompare, purchase, purchaseList[purchase], price));
                 }
+                // TODO Continue не нужен, цикл и так продолжится.
                 else continue;
 
             }
