@@ -12,6 +12,10 @@ namespace Lecture_1_7_Kalodzka_Mikalai.Library
 
         public void Add(Author author)
         {
+            if(author == null)
+            {
+                throw new ArgumentNullException("author");
+            }
             authors.Add(author);   
         }
     }
