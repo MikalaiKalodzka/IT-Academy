@@ -1,15 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Lecture_2_1.ConsoleApp
+﻿namespace Lecture_2_1.ConsoleApp
 {
     class Program
     {
         static void Main(string[] args)
         {
+            // TODO 
+            /*
+             * Человек не знает что бываею лекции. Но впринципе может спать
+             * Студенты умеют учиться, но им нужна для этого лекция
+             * Препод учиться уже не умеет (или не хочет)
+             */
+
             var university = new University();
 
 
@@ -24,7 +25,6 @@ namespace Lecture_2_1.ConsoleApp
             university.AddToLectureList(lecture2);
             university.AddToLectureList(lecture3);
             university.AddToLectureList(lecture4);
-
 
 
             var professor0 = new Professor("Rick Nash", lecture0);
@@ -53,14 +53,6 @@ namespace Lecture_2_1.ConsoleApp
 
 
             university.IterateLectures();
-            
-
-
-
-
-
-
         }
     }
-
 }

@@ -1,8 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Lecture_2_1.ConsoleApp
 {
@@ -18,7 +15,6 @@ namespace Lecture_2_1.ConsoleApp
 
         public University(List<Human> persons, List<Lecture> lectures)
         {
-            
             if (persons == null)
                 throw new ArgumentNullException("persons");
             else
@@ -32,7 +28,6 @@ namespace Lecture_2_1.ConsoleApp
             {
                 this.lectures.AddRange(lectures);
             }
-
         }
 
 
@@ -44,7 +39,6 @@ namespace Lecture_2_1.ConsoleApp
             {
                 persons.Add(human);
             }
-            
         }
 
         public void AddToLectureList(Lecture study)
@@ -54,7 +48,6 @@ namespace Lecture_2_1.ConsoleApp
             else
             {
                 lectures.Add(study);
-                
             }
         }
 
@@ -77,7 +70,5 @@ namespace Lecture_2_1.ConsoleApp
                 }
             }
         }
-
-                
     }
 }

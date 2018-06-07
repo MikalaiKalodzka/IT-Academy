@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Lecture_1_8.Library;
 
 namespace Lecture_1_8_Kalodzka_Mikalai
@@ -50,22 +46,25 @@ namespace Lecture_1_8_Kalodzka_Mikalai
 
         static void Play()
         {
-            for (int index = 0; index < album.SongCount; index++)
-            {
-                Console.WriteLine($"{index + 1}. {album[index]}");
-            }
+            // TODO Дублирование кода
+            Play(0, album.SongCount - 1);
+            //for (int index = 0; index < album.SongCount; index++)
+            //{
+            //    Console.WriteLine($"{index + 1}. {album[index]}");
+            //}
         }
 
         static void Play(int startIndex)
         {
-            if (startIndex < 0 || startIndex >= album.SongCount)
-            {
-                throw new ArgumentOutOfRangeException("startIndex");
-            }
-            for (int index = startIndex; (index >= startIndex && index < album.SongCount); index++)
-            {
-                Console.WriteLine($"{index + 1}. {album[index]}");
-            }
+            Play(startIndex, album.SongCount - 1);
+            //if (startIndex < 0 || startIndex >= album.SongCount)
+            //{
+            //    throw new ArgumentOutOfRangeException("startIndex");
+            //}
+            //for (int index = startIndex; (index >= startIndex && index < album.SongCount); index++)
+            //{
+            //    Console.WriteLine($"{index + 1}. {album[index]}");
+            //}
         }
 
         static void Play(int startIndex, int endIndex)

@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Lecture_1_7_Kalodzka_Mikalai.Library
 {
@@ -19,13 +17,31 @@ namespace Lecture_1_7_Kalodzka_Mikalai.Library
             bookList.Add(book);
         }
 
-        public bool SetBookAvailable(Book book)
+        // TODO тут следовало использовать VOID. И этот метод должен был находить книгу в коллекции и 
+        // делать её доступной.
+        //public bool SetBookAvailable(Book book)
+        //{
+        //    if (book == null)
+        //    {
+        //        throw new ArgumentNullException("book");
+        //    }
+        //    return book.InStock = true;
+        //}
+
+        public void SetBookAvailable(Book book)
         {
-            if (book == null)
+            SetBookAvailable(book.BookName, book.AuthorName);
+        }
+
+        public void SetBookAvailable(string bookName, string authorName)
+        {
+            if(bookList == null || bookList.Any()) return;
+
+            foreach (var book in bookList)
             {
-                throw new ArgumentNullException("book");
+                if (book.AuthorName == authorName && book.BookName == bookName)
+                    book.InStock = true;
             }
-            return book.InStock = true;
         }
 
         public bool SetBookUnavailable(Book book)
