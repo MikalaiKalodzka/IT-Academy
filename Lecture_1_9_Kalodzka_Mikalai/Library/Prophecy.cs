@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Library
+﻿namespace Library
 {
     public struct Prophecy
     {
@@ -18,6 +12,7 @@ namespace Library
             Interval = interval;
             switch (interval)
             {
+                // TODO Nice =)
                 case Interval.Today:
                     Text =  "Ваше предсказание на сегодня: внимательно следите за своими вложениями можете попасть в руки к аферистам.";
                     break;
@@ -31,7 +26,7 @@ namespace Library
                     Text = "Ваше предсказание на следующий месяц: чтобы узнать, что ждет вас через месяц: вам следует прийти на еще один сеанс. И прихватите с собой больше денег, они создадут ауру прозрачности для моего ясновидения.";
                     break;
                 default:
-                    Text = "Уважаемый, мы тут вообще-то серъезными вещами занимаемся, так что не мешайте!";
+                    Text = "Уважаемый, мы тут вообще-то серьезными вещами занимаемся, так что не мешайте!";
                     break;
             }
         }

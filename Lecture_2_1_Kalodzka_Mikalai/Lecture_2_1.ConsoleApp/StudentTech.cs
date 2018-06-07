@@ -1,22 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Lecture_2_1.ConsoleApp
+﻿namespace Lecture_2_1.ConsoleApp
 {
-    public class StudentTech: Student
+    public class StudentTech : Student
     {
-
-        public StudentTech(string fullName, Lecture lecture): base(fullName, lecture)
+        public StudentTech(string fullName, Lecture lecture) : base(fullName, lecture)
         {
-
         }
 
-        public override string Learn()
+        public override string Learn() // TODO По логике вы скорее передаёте сюда лекцию, а студент либо учится либо спит =))
         {
-
             if (Lecture.LectureType == LectureType.Technician)
             {
                 return base.Learn();
@@ -26,6 +17,5 @@ namespace Lecture_2_1.ConsoleApp
                 return base.Sleep();
             }
         }
-
     }
 }

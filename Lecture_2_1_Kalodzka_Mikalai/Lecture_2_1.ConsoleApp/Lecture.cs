@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Lecture_2_1.ConsoleApp
+﻿namespace Lecture_2_1.ConsoleApp
 {
     public class Lecture
     {
@@ -19,6 +13,7 @@ namespace Lecture_2_1.ConsoleApp
             Title = title;
             this.LectureType = lectureType;
         }
+
         public void AssignProfessor(Professor professor)
         {
             this.professor = professor;
@@ -31,8 +26,5 @@ namespace Lecture_2_1.ConsoleApp
             this.student = student;
             student.Lecture = this;
         }
-
-
-
     }
 }
