@@ -1,28 +1,24 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿
 
 namespace Lecture_2_1.ConsoleApp
 {
     public class Student: Human
     {
-        
-        public Student(string fullName, Lecture lecture): base(fullName, lecture)
-        {                    
+        public Lecture Lecture;
+
+        public Student(string fullName, Lecture lecture): base(fullName)
+        {
+            Lecture = lecture;            
         }
 
         public virtual string Learn()
         {
-            string learnText = $"Student {FullName} is  studying on '{Lecture.Title}' lecture.";
-            return learnText;
+            return $"Student {FullName} is  studying on '{Lecture.Title}' lecture.";
         }
 
         protected string Sleep()
         {
-            string sleepText = $"Student {FullName} is  sleaping on '{Lecture.Title}' lecture.";
-            return sleepText;
+            return $"Student {FullName} is  sleeping on '{Lecture.Title}' lecture.";
         }
     }
 }

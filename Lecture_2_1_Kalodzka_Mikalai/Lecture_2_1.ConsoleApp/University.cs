@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 
 namespace Lecture_2_1.ConsoleApp
 {
@@ -32,9 +30,7 @@ namespace Lecture_2_1.ConsoleApp
             {
                 this.lectures.AddRange(lectures);
             }
-
         }
-
 
         public void AddToPersonList(Human human)
         {
@@ -43,8 +39,7 @@ namespace Lecture_2_1.ConsoleApp
             else
             {
                 persons.Add(human);
-            }
-            
+            }            
         }
 
         public void AddToLectureList(Lecture study)
@@ -53,31 +48,32 @@ namespace Lecture_2_1.ConsoleApp
                 throw new ArgumentNullException("lecture");
             else
             {
-                lectures.Add(study);
-                
+                lectures.Add(study);                
             }
         }
 
-        public void IterateLectures()
+        public List<string> GetLectures()
         {
+            var lectures = new List<string>();
             foreach (var person in persons)
             {
                 var student = person as Student;
                 if (student != null)
                 {
-                    student.Learn(student);
+                    string message = student.Learn();
+                    lectures.Add(message);
                 }
                 else
                 {
                     var professor = person as Professor;
                     if (professor != null)
                     {
-                        professor.Work(professor);
+                        string message = professor.Work();
+                        lectures.Add(message);
                     }
                 }
             }
-        }
-
-                
+            return lectures;
+        }                
     }
 }

@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 
 namespace Lecture_2_1.ConsoleApp
 {
@@ -11,8 +8,7 @@ namespace Lecture_2_1.ConsoleApp
         static void Main(string[] args)
         {
             var university = new University();
-
-
+            
             var lecture0 = new Lecture("Biology", LectureType.Humanitarian);
             var lecture1 = new Lecture("Phisics", LectureType.Technician);
             var lecture2 = new Lecture("Mechanics", LectureType.Technician);
@@ -24,9 +20,7 @@ namespace Lecture_2_1.ConsoleApp
             university.AddToLectureList(lecture2);
             university.AddToLectureList(lecture3);
             university.AddToLectureList(lecture4);
-
-
-
+            
             var professor0 = new Professor("Rick Nash", lecture0);
             var professor1 = new Professor("Steve Byron", lecture1);
             var professor2 = new Professor("David Pepper", lecture2);
@@ -39,6 +33,12 @@ namespace Lecture_2_1.ConsoleApp
             university.AddToPersonList(professor3);
             university.AddToPersonList(professor4);
 
+            lecture0.AssignProfessor(professor0);
+            lecture1.AssignProfessor(professor1);
+            lecture2.AssignProfessor(professor2);
+            lecture3.AssignProfessor(professor3);
+            lecture4.AssignProfessor(professor4);
+            
             var student0 = new StudentTech("Linda Rot", lecture0);
             var student1 = new StudentHum("Karl Mason", lecture1);
             var student2 = new StudentHum("Rachel McDonell", lecture2);
@@ -50,17 +50,16 @@ namespace Lecture_2_1.ConsoleApp
             university.AddToPersonList(student2);
             university.AddToPersonList(student3);
             university.AddToPersonList(student4);
-
-
-            university.IterateLectures();
             
+            lecture0.AssignStudent(student0);
+            lecture1.AssignStudent(student1);
+            lecture2.AssignStudent(student2);
+            lecture3.AssignStudent(student3);
+            lecture4.AssignStudent(student4);             
 
+            Console.WriteLine(string.Join("\n", university.GetLectures()));
 
-
-
-
-
+            Console.ReadLine();
         }
     }
-
 }
