@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿
 
 namespace Lecture_2_2_Kalodzka_Mikalai.Human
 {
@@ -15,7 +11,7 @@ namespace Lecture_2_2_Kalodzka_Mikalai.Human
         
         public override string Work()
         {
-            return $"Student {FirstName} {LastName} is currently studying at {department} Department";
+            return $"Student {FirstName} {LastName} is currently studying at {Department} Department";
         }
 
         public override bool Equals(object obj)

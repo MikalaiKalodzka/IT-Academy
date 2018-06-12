@@ -1,8 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 using Lecture_2_2_Kalodzka_Mikalai.Human;
 
@@ -17,13 +14,25 @@ namespace Lecture_2_2_Kalodzka_Mikalai.La_la_land
 
         }
 
+        public University(List<HomoSapiens> persons)
+        {
+            if (persons == null)
+                throw new ArgumentNullException("persons");
+            else
+            {
+                foreach (var person in persons)
+                {
+                    AddPerson(person);
+                }
+            }
+        }
+
         public void AddPerson(HomoSapiens newPerson)
         {
             if (newPerson == null)
                 throw new ArgumentNullException("newPerson");
             foreach (var person in persons)
             {
-
                 if (person.Equals(newPerson))
                 {
                     throw new ArgumentException("University already has this person", "newPerson");
@@ -32,19 +41,6 @@ namespace Lecture_2_2_Kalodzka_Mikalai.La_la_land
             persons.Add(newPerson);
         }
 
-        public University(List<HomoSapiens> persons)
-        {
-            if (persons == null)
-                throw new ArgumentNullException("persons");
-            else {
-                foreach (var person in persons)
-                {
-                    AddPerson(person);
-                }
-            }
-        }
-
-        
         public List<string> GetUniversityList()
         {
             var position = new List<string>();
@@ -71,7 +67,6 @@ namespace Lecture_2_2_Kalodzka_Mikalai.La_la_land
                 }
             }
             return position;
-
         }
     }
 }

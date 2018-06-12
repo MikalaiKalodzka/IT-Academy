@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿
 
 namespace Lecture_2_2_Kalodzka_Mikalai.Human
 {
@@ -15,8 +11,7 @@ namespace Lecture_2_2_Kalodzka_Mikalai.Human
 
         public override string Work()
         {
-            return $"Professor {FirstName} {LastName} is currently the Head of the {department} Department";
+            return $"Professor {FirstName} {LastName} is currently the Head of the {Department} Department";
         }
-
     }
 }

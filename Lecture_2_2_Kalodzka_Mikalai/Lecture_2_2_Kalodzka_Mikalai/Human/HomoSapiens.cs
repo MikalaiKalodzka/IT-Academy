@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 
 namespace Lecture_2_2_Kalodzka_Mikalai.Human
 {
@@ -12,7 +9,7 @@ namespace Lecture_2_2_Kalodzka_Mikalai.Human
 
         public string LastName { get; protected set; }
 
-        public Department department { get; }
+        public Department Department { get; }
 
         public HomoSapiens(string firstName, string lastName, Department department)
         {
@@ -22,14 +19,14 @@ namespace Lecture_2_2_Kalodzka_Mikalai.Human
             if (lastName == null)
                 throw new ArgumentNullException("LastName");
             LastName = lastName;
-            this.department = department;
+            Department = department;
         }
 
         public abstract string Work();
 
         public override string ToString()
         {
-            return $"{this.GetType().Name} - Name: {FirstName} {LastName} - Department: {department}";
+            return $"{this.GetType().Name} - Name: {FirstName} {LastName} - Department: {Department}";
         }
     }
 }
