@@ -50,6 +50,7 @@ namespace Lecture_2_2_Kalodzka_Mikalai.La_la_land
                 var professor = person as Professor;
                 var headprofessor = person as HeadOfDepartment;
                 
+                // TODO Ну а тут должно было вызываться Learn Для студента и Work для профессорского состава
                 if (student != null)
                 {
                     string message = student.Work();
@@ -60,6 +61,7 @@ namespace Lecture_2_2_Kalodzka_Mikalai.La_la_land
                     string message = professor.Work();
                     position.Add(message);
                 }
+                // TODO Так как Профессор является базовым для Депатмент манагера то этот IF никогда не вызовется 
                 else if(headprofessor != null)
                 {
                     string message = headprofessor.Work();

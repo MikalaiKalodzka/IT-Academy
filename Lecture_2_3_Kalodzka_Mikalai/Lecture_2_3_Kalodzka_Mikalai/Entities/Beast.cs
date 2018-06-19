@@ -1,15 +1,15 @@
-﻿
-namespace Lecture_2_3_Kalodzka_Mikalai.Entities
+﻿namespace Lecture_2_3_Kalodzka_Mikalai.Entities
 {
-
     public abstract class Beast : IAnimal
     {
-        public int Hunger { get; protected set;}
-        
+        public int Hunger { get; protected set; }
+
         public abstract void Eat();
 
+        // TODO Думаю с таким раскладом можно было в свойство определить =)
         public string Satiety()
         {
+            // TODO Тернарный оператор
             if (Hunger < 0)
                 return "I will survive.";
             else

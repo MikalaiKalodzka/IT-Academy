@@ -96,25 +96,41 @@ namespace Lecture14HW
              4. Используя метод из пункта 2, отсортировать студентов по средней оценке
              5. Используя метод из пункта 3, всем студентам с оценкой от 4 до 6 добавить 1 балл.
              */
-            var group = new Group(new List<Student> { new Student(), new Student(), new Student(), new Student(), new Student(), new Student() });
+            var group = new Group(new List<Student>
+            {
+                new Student(),
+                new Student(),
+                new Student(),
+                new Student(),
+                new Student(),
+                new Student()
+            });
 
             //group.DoSmth(WriteName);
 
-            group.DoSmth((student) => Console.WriteLine($"Student {student.FirstName} {student.LastName} | Average Mark: {student.AvgMark: 0.00}"));
+            group.DoSmth((student) =>
+                Console.WriteLine(
+                    $"Student {student.FirstName} {student.LastName} | Average Mark: {student.AvgMark: 0.00}"));
 
             Console.WriteLine("\n\n\n");
 
             var sortedList = group.SortStudents(CompareByAvrMark);
 
-            Console.WriteLine(string.Join("\n", sortedList.Select(student => $"Student {student.FirstName} {student.LastName} | Average Mark: {student.AvgMark: 0.00}")));
+            Console.WriteLine(string.Join("\n",
+                sortedList.Select(student =>
+                    $"Student {student.FirstName} {student.LastName} | Average Mark: {student.AvgMark: 0.00}")));
 
             Console.WriteLine("\n\n\n");
 
-            group.DoSmth((student) => { if (student.AvgMark >= 4 && student.AvgMark <= 6)
+            group.DoSmth((student) =>
+            {
+                if (student.AvgMark >= 4 && student.AvgMark <= 6)
                     student.ChangeAvgMark(student, 1.0);
             });
 
-            Console.WriteLine(string.Join("\n", sortedList.Select(student => $"Student {student.FirstName} {student.LastName} | Average Mark {student.AvgMark: 0.00}")));
+            Console.WriteLine(string.Join("\n",
+                sortedList.Select(student =>
+                    $"Student {student.FirstName} {student.LastName} | Average Mark {student.AvgMark: 0.00}")));
         }
         
         static bool CompareByAvrMark(Student firstStudent, Student secondStudent)
@@ -122,17 +138,19 @@ namespace Lecture14HW
             return firstStudent.AvgMark > secondStudent.AvgMark;
         }
 
+        // TODO Not Used
         static void AddMark(Student student)
         {
             if (student.AvgMark >= 4 && student.AvgMark <= 6)
                 student.ChangeAvgMark(student, 1.0);
         }
-
+        // TODO Not Used
         static void WriteName(Student student)
         {
             Console.WriteLine($"Student {student.FirstName} {student.LastName} | Average Mark {student.AvgMark}");
         }
 
+        // TODO Решили не разбираться? ;)
         static void TaskThree()
         {
             // TODO Задача 3* Func, Action + =>
