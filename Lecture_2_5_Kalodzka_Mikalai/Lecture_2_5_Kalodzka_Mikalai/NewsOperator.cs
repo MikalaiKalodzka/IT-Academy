@@ -69,5 +69,31 @@ namespace Lecture_2_5_Kalodzka_Mikalai
                     }
                 }        
         }
+        
+        public void UnSubscribe(ServiceSubscriber subscriber, params NewsCategory[] category)
+        {
+            if (subscriber != null)
+                foreach (var item in category)
+                {
+                    switch (item)
+                    {
+                        case NewsCategory.News:
+                            OnNewsOut -= subscriber.OnNewsSend;
+                            break;
+                        case NewsCategory.Weather:
+                            OnWeatherOut -= subscriber.OnNewsSend;
+                            break;
+                        case NewsCategory.Sport:
+                            OnSportsNewsOut -= subscriber.OnNewsSend;
+                            break;
+                        case NewsCategory.Events:
+                            OnEventsOut -= subscriber.OnNewsSend;
+                            break;
+                        case NewsCategory.Humor:
+                            OnHumorOut -= subscriber.OnNewsSend;
+                            break;
+                    }
+                }
+        }
     }
 }

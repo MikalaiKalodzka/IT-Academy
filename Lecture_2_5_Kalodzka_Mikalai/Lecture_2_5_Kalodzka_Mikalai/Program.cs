@@ -9,9 +9,15 @@ namespace Lecture_2_5_Kalodzka_Mikalai
             var newsOperator = new NewsOperator();
 
             var user1 = new ServiceSubscriber("Hendrik Larsson");
+
+            var user2 = new ServiceSubscriber("Dobby");
             
             newsOperator.Subscribe(user1, NewsCategory.News);
             newsOperator.Subscribe(user1, NewsCategory.Humor);
+
+            newsOperator.Subscribe(user2, NewsCategory.Sport);
+
+            newsOperator.UnSubscribe(user1, NewsCategory.News);
 
             var todayNews = new News(NewsCategory.News, MessageToSend(NewsCategory.News));
             var todayWeather = new News(NewsCategory.Weather, MessageToSend(NewsCategory.Weather));
