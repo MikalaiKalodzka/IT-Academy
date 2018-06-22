@@ -1,5 +1,4 @@
-﻿
-namespace Lecture_2_3_Kalodzka_Mikalai.Entities
+﻿namespace Lecture_2_3_Kalodzka_Mikalai.Entities
 {
     public interface IAnimal
     {

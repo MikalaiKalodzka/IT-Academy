@@ -25,13 +25,15 @@ namespace Lecture_2_3_Kalodzka_Mikalai.Nature
             rabbits = GenerateRabbits();
             tigers = GenerateTigers();
         }
-                
+        
+        // TODO Not USED
         public void EatGrass()
         {
             if (Grass > 0)
                 Grass--;
         }
 
+        // TODO Метод иммет место быть, вот только не должны тигры из себя его вызывать...
         public void EatRabbit()
         {
             if (rabbits.Count > 0)

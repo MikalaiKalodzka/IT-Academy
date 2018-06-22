@@ -16,6 +16,7 @@ namespace Lecture_2_2_Kalodzka_Mikalai.Human
 
         public override bool Equals(object obj)
         {
+            // TODO Опять return true if true. Следует объединять в один return
             Professor professor = obj as Professor;
             if (professor == null)
                 return false;

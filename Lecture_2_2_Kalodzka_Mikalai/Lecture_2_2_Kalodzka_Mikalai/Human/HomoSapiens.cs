@@ -13,12 +13,9 @@ namespace Lecture_2_2_Kalodzka_Mikalai.Human
 
         public HomoSapiens(string firstName, string lastName, Department department)
         {
-            if (firstName == null)
-                throw new ArgumentNullException("FirstName");
-            FirstName = firstName;
-            if (lastName == null)
-                throw new ArgumentNullException("LastName");
-            LastName = lastName;
+            // TODO Во первых есть ?? во вторых мы не кидаем ошибки в своём коде если не планируем их логировать
+            FirstName = firstName ?? throw new ArgumentNullException("FirstName");
+            LastName = lastName ?? throw new ArgumentNullException("LastName");
             Department = department;
         }
 

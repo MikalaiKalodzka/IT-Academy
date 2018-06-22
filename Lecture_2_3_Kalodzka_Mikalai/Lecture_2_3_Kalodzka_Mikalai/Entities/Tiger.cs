@@ -15,6 +15,8 @@ namespace Lecture_2_3_Kalodzka_Mikalai.Entities
 
         public override void Eat()
         {
+            // TODO Нельзя ходить к классу выше и там манипулировать классами ниже
+
             Field.EatRabbit();
             Hunger--;
         }
