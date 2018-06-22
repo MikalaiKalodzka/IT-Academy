@@ -2,6 +2,9 @@
 
 namespace Lecture_2_5_Kalodzka_Mikalai
 {
+    // TODO Раз вы создали EventArgs, то видимо планировалось
+    // использовать EventHandler но почему-то передумали и
+    // создали делегат. Смотрите мой вариант с V2 вашего оператора
     public delegate void NewsHandler(News news);
 
     public class NewsOperator

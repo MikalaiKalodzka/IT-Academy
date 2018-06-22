@@ -17,5 +17,10 @@ namespace Lecture_2_5_Kalodzka_Mikalai
             Console.WriteLine(news.Message);
             Console.WriteLine("\n\n");
         }
+
+        public void OnNewsSend(object sender, NewsEventArgs e)
+        {
+            //throw new NotImplementedException();
+        }
     }
 }
