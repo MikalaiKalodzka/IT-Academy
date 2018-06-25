@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2000
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lecture_2_7_Kalodzka_Mikalai", "Lecture_2_7\Lecture_2_7_Kalodzka_Mikalai.csproj", "{282A6777-0753-40C7-AC49-7658B2615DD7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MusicLibrary", "MusicLibrary\MusicLibrary.csproj", "{56F59C0A-084B-43EC-B9C4-B91E6448A958}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{282A6777-0753-40C7-AC49-7658B2615DD7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{282A6777-0753-40C7-AC49-7658B2615DD7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{282A6777-0753-40C7-AC49-7658B2615DD7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{282A6777-0753-40C7-AC49-7658B2615DD7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{56F59C0A-084B-43EC-B9C4-B91E6448A958}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{56F59C0A-084B-43EC-B9C4-B91E6448A958}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{56F59C0A-084B-43EC-B9C4-B91E6448A958}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{56F59C0A-084B-43EC-B9C4-B91E6448A958}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {DB29313F-40F6-4786-83B3-54DA7F1A8DD9}
+	EndGlobalSection
+EndGlobal
