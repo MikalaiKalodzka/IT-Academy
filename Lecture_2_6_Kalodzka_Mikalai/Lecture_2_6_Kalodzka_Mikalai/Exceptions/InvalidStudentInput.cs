@@ -2,6 +2,7 @@
 
 namespace Lecture_2_6_Kalodzka_Mikalai.Exceptions
 {
+    // TODO Классы ошибок должны оканчиваться на Exception -> InvalidStudentInputException
     public class InvalidStudentInput: Exception
     {
         public InvalidStudentInput(): base() { }
