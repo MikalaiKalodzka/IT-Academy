@@ -7,7 +7,6 @@ namespace Lecture_2_6_Kalodzka_Mikalai.Entities
 
         public Student()
         {
-            
         }
 
         public Student(string studentName)

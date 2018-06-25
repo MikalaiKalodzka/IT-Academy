@@ -42,9 +42,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="INewsSubscriber.cs" />
     <Compile Include="News.cs" />
     <Compile Include="NewsCategory.cs" />
     <Compile Include="NewsEventArgs.cs" />
+    <Compile Include="NewsOperatorV2.cs" />
     <Compile Include="NewsOperator.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
